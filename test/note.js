@@ -2,14 +2,14 @@ const { chai, server } = require("./testConfig");
 const NoteModel = require("../models/NoteModel");
 
 /**
- * Test cases to test all the book APIs
+ * Test cases to test all the note APIs
  * Covered Routes:
  * (1) Login
- * (2) Store book
- * (3) Get all books
- * (4) Get single book
- * (5) Update book
- * (6) Delete book
+ * (2) Store note
+ * (3) Get all notes
+ * (4) Get single note
+ * (5) Update note
+ * (6) Delete note
  */
 
 describe("Note", () => {
@@ -28,8 +28,8 @@ describe("Note", () => {
 
 	// Prepare data for testing
 	const testData = {
-		title: "testing book",
-		content: "testing book desc",
+		title: "testing note",
+		content: "testing note desc",
 	};
 
 	/*

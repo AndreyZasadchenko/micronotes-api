@@ -122,7 +122,7 @@ exports.noteStore = [
 					errors.array(),
 				);
 			} else {
-				//Save book.
+				//Save note.
 				note.save(function(err) {
 					if (err) {
 						return apiResponse.ErrorResponse(res, err);
@@ -197,7 +197,7 @@ exports.noteUpdate = [
 									"You are not authorized to do this operation.",
 								);
 							} else {
-								//update book.
+								//update note.
 								Note.findByIdAndUpdate(req.params.id, note, {}, function(err) {
 									if (err) {
 										return apiResponse.ErrorResponse(res, err);
@@ -255,7 +255,7 @@ exports.noteDelete = [
 							"You are not authorized to do this operation.",
 						);
 					} else {
-						//delete book.
+						//delete note.
 						Note.findByIdAndRemove(req.params.id, function(err) {
 							if (err) {
 								return apiResponse.ErrorResponse(res, err);
